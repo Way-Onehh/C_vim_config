@@ -17,6 +17,12 @@ set tabstop=4
 set shiftwidth=4
 set expandtab
 syntax on
+
+"files
+nmap > : n<CR>
+nmap < : N<CR>
+
+"buf
 nmap bs : buffers <CR>
 nmap bn : buffer 
 nmap br : bd 
@@ -33,7 +39,7 @@ set statusline+=%{fugitive#statusline()}
 nmap <C-g> : Git 
 
 " NERDTree 配置
-map <C-t> :NERDTreeToggle<CR>
+nmap <C-t> :NERDTreeToggle<CR>
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 " vim-airline 配置
